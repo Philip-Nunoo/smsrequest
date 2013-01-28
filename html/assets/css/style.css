@@ -1,0 +1,47 @@
+label
+{
+   font-family : Arial, sans-serif;
+   font-size:0.8em;
+   font-weight: bold;
+}
+
+legend, h2
+{
+   font-family : Arial, sans-serif;
+   font-size: 1.3em;
+   border: none;
+   font-weight:bold;
+   color:#333;
+}
+
+fieldset
+{
+   width: 400px;
+   margin: auto;
+   padding:20px;
+   border:1px solid #ccc;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+border-radius: 10px;   
+}
+
+.container
+{
+   margin-top:8px;
+   margin-bottom: 10px;
+}
+
+input[type="submit"]
+{
+   width:100px;
+   height:30px;
+   padding-left:0px;
+}
+
+.short_explanation
+{
+   font-family : Arial, sans-serif;
+   font-size: 0.6em;
+   color:#333;   
+}

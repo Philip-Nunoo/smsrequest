@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Patient Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {      	
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+<body>
+	<div class="container">
+	<div class="row">
+	 <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list">
+          <li><a href="#overview"><i class="icon-chevron-right"></i> Hospitals</a></li>
+          <li><a href="#transitions"><i class="icon-chevron-right"></i> Patients</a></li>
+          <li><a href="#modals"><i class="icon-chevron-right"></i> Personnels</a></li>
+          <li class="divider"></li>
+          <li><a href="createnewmessage.html" class="active"><i class="icon-chevron-right"></i> Create New Message</a></li>
+          <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Message History</a></li>
+          <li class="divider"></li>
+          <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Cost Data</a></li>
+          <li><a href="#tabs"><i class="icon-chevron-right"></i> Recent Activities</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+		<h2>Creating Message User</h2>
+			<p><i>You can only send messages to patients registered at your hospital.</i></p>
+			<form method="post">
+				<p><input type="text" placeholder="Enter Receipient Name" class="input-xlarge"  id="inputError"/> </p>
+				<p><input type="text" placeholder="Enter contact info" class="input-xlarge"/> </p>
+				<p><textarea rows="7" placeholder="Enter message in this area"></textarea></p>
+				<p> 
+				<select multiple="multiple">
+					<option>Please select message Category</option>
+					<option>Apointment</option>
+					<option>Emergency</option>
+					<option>Notification</option>
+					<option>Information</option>
+				</select>
+				</p>
+				<label class="radio">
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					Send Message Now
+				</label>
+				<label class="radio">
+					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+					Send Message Later
+				</label>	
+				<label class="radio">
+					<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+					Schedule cron Task
+				</label>
+				<br/>
+				<label class="checkbox">
+					<input type="checkbox" checked="checked"> Save message
+				</label>
+				<input type="submit" class="btn-primary" value="Send / Save"/>
+			</form>
+	    </div>
+	    </div>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

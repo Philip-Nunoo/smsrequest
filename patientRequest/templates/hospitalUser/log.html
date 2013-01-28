@@ -1,0 +1,35 @@
+{% extends './base/portal.html' %}
+{% block pagetitle %}Message Log Data{% endblock %}
+<style>
+</style>
+{% block content %}
+
+Message Log Page
+<table class="table" cellpadding="4" cellspacing="0">
+<tr><th>Message Type</th><th>Patient Name</th><th>Telephone Number</th><th>Message</th><th>Time</th></tr>
+{% for log in messageLog %}
+<tr>
+	<td>{{log.message}}</td>
+	<td>{{log.patient.last_name}} {{log.patient.first_name}}</td>
+	<td>No telephone number</td>
+	<td>{{log.message.message_content}}</td>
+	<td>{{log.date_time_sent}}</td>
+</tr>
+{% endfor %}
+<div class="pagination">
+    <span class="step-links">
+        {% if messageLog.has_previous %}
+            <a href="?page={{ messageLog.previous_page_number }}">&larr; previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ messageLog.number }} of {{ messageLog.paginator.num_pages }}.
+        </span>
+
+        {% if messageLog.has_next %}
+            <a href="?page={{ messageLog.next_page_number }}">next &rarr;</a>
+        {% endif %}
+    </span>
+</div>
+</table>
+{% endblock %}
