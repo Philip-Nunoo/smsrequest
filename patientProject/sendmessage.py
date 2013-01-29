@@ -23,7 +23,8 @@ def sendMessage():
                     'msg': message_content, 
                     'sender_id': sender_id
                 }
-                print "Sending message"# + message_content + " to " + phone_number + " "
+                print "Sending message: " + message_content
+                print "To: " + phone_number
                 
                 #requests.get(url, params = get_data)        # This line sends the message to mnotify                
                 '''
@@ -34,15 +35,19 @@ def sendMessage():
                 
             if message.message_frequency == "daily":
                 #message.start_at_date = message.start_at_date + datetime.timedelta(days=1)
-                print "Daily messages"
+                #print "Daily messages"
+                pass
             if message.message_frequency == "weekly":
                 #message.start_at_date = message.start_at_date + datetime.timedelta(days=7)
-                print "Weekly Message"
+                #print "Weekly Message"
+                pass
             if message.message_frequency == "monthly":
                 #message.start_at_date = message.start_at_date + datetime.timedelta(days=30)
-                print "Monthly Message"
+                #print "Monthly Message"
+                pass
             if message.message_frequency == "specify":
-                print "Specific date set"
+                #print "Specific date set"
+                pass
             #if message.start_at_date > message.end_at_date: # if message exceeds ending date active = False
              #   message.active = False
                     

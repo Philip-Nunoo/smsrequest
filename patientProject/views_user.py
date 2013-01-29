@@ -36,7 +36,7 @@ def createNewMessage(request):
             
                 message_form.active = True  # making the message active should change later
             
-            message_form.save(commit = True)            
+            message_form.save()            
             return HttpResponseRedirect("/hospitalUser/")
     else:
         form = NewMessageForm()
@@ -71,7 +71,7 @@ def addPersonnel(request):
 
 def viewLog(request):
     messageLogList = MessageLog.objects.all()
-    paginator = Paginator(messageLogList, 10) # Show 25 contacts per page
+    paginator = Paginator(messageLogList, 2) # Show 25 contacts per page
 
     page = request.GET.get('page')
     try:
