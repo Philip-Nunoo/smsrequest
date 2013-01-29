@@ -36,7 +36,7 @@ def createNewMessage(request):
             
                 message_form.active = True  # making the message active should change later
             
-            message_form.save()            
+            message_form.save(commit = True)            
             return HttpResponseRedirect("/hospitalUser/")
     else:
         form = NewMessageForm()
