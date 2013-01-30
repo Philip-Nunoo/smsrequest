@@ -1,7 +1,7 @@
-from key.models import Key
 from django.contrib import admin
+from key.models import Key
 
 class KeyAdmin (admin.ModelAdmin):
-    list_display = ('hospital_name','hospital_key')
+    list_display = ('key',)
     
-admin.site.register(Key, KeyAdmin)
+admin.site.register(Key,KeyAdmin)

@@ -1,0 +1,38 @@
+{% extends './base/portal.html' %}
+{% block pagetitle %}Patient View{% endblock %}
+<style>
+</style>
+{% block content %}
+
+<h3>Displaying list of all Patients.</h3>
+<p> Add <a href="addNewPatient">New +</a> </p>
+{% if patients %}
+<table class="table" cellpadding="4" cellspacing="0">
+	<tr style="text-align: left"><th></th><th>Patient Name</th><th>Telephone Number</th></tr>
+	{% for patient in patients %}
+	<tr>
+		<td style="font-size: 9px;"> 
+			<a href="editpatient/{{patient.id}}">edit</a> &nbsp; 
+			<a href="viewpatient/{{patient.id}}">view</a> &nbsp; 
+			<a href="deletepatient/{{patient.id}}">delete</a> 
+		</td>
+		<td>{{ patient.last_name }}{{ patient.first_name }}</td>
+		<td>{{ patient.telephone_number }}</td>
+	</tr>
+	{% endfor %}
+<table>
+{% else %}
+<p>No patient have been registered yet</p>
+<p>Click <a href="addNewPatient">here</a> to add new Patient</p>
+{% endif %}
+{% endblock %}
+
+
+    first_name = models.CharField(max_length = 50)
+    last_name = models.CharField(max_length = 50)
+    telephone_number = models.CharField(max_length = 10)
+    email_address = models.EmailField(blank = True)
+    registration_date = models.DateField(auto_now = True)
+    
+    hospital_id = models.ForeignKey(Hospital)
+    description = models.TextField()

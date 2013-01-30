@@ -1,0 +1,59 @@
+{% extends './base/base.html' %}
+
+{% block head %}
+<title>Patient Request | {% block title%}{% endblock %}</title>
+<style>
+#section
+{
+	width: 200px;
+	float: left;
+	font-size: 13px;
+}
+
+.section_nav
+{
+	padding: 4px;
+	border:2px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;	
+}
+
+#content_section{
+	margin-left: 220px;
+}
+</style>
+{% endblock %}
+
+{% block navigation %}
+<a href="/hospitalUser/">home</a>
+<a href="/logout/">logout</a>
+{% endblock %}
+
+{% block body %}
+    <header>
+        <h1>Patient Alert System | <a href="/hospitalUser/"> Web Portal</a></h1>
+        <p><input type="checkbox">Enable Messaging</p>
+    </header>
+	<div id="section">
+		<div class="section_nav">
+			<p>Welcome, {{ user.username }}</p>
+			<a href="createNewMessage">Create New Message</a><br />
+			<a href="addNewPatient">Add new patient</a><br />
+			<a href="addPersonnel">Add Personnel</a>
+		</div>
+		<div class="section_nav">
+			<a href="viewMessages">View all Messages</a><br />
+			<a href="viewPatients">View all patient</a><br />
+			<a href="viewPersonnels">View Personnels</a>
+		</div>
+		<div class="section_nav">
+			<p>Reports of activities</p>
+			<a href="viewLog">View sent messages</a>
+		</div>
+	</div>
+
+   <div id="content_section">{% block content %}{% endblock %}</div>
+{% endblock %}

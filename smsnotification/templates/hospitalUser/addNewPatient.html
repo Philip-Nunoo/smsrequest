@@ -1,0 +1,16 @@
+{% extends './base/portal.html'%}
+{% block pagetitle %}New Patient{% endblock %}
+{% block content %}
+
+<h2>Add new Patient</h2>
+<fieldset><form action="" method="post">
+<table>
+    {{ newPatientForm.as_table }}
+    <tr>
+    	<td></td>
+    	<td><input type="submit" value="Add"/></td>
+    </tr>
+</table>    
+</form>
+</fieldset>
+{% endblock %}

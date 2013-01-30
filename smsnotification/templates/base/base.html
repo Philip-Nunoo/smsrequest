@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block head %}<title>Patient Request</title>{% endblock %}
+<style>
+	body
+	{
+		background-color: #FBFBFB;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+		font-size: 12px;
+	}
+	a
+	{
+		text-decoration: none;
+	}
+	
+	a:hover
+	{
+		text-decoration: underline;
+	}
+	
+	#header a {
+		text-decoration: none;
+		color: inherit;
+	}
+	#header
+	{
+		background-color:#002A80;
+		color:#F7F7F7;
+		font-size: 25px;
+		padding: 25px 0 20px 0;
+	}
+	.header_content
+	{
+		width: 75%;
+		margin: auto;
+	}
+	
+	#navigation
+	{
+		background-color: #CBC9C9;
+	}
+	.navigation
+	{
+		text-align: right;
+		font-size: 14px;
+		height: auto;
+	}
+	.navigation a
+	{
+		color:white;
+		padding: 0 13px 0 13px;
+		text-decoration: none;
+		background-color:#000000;
+		display: inline;
+	}
+	.navigation a:hover
+	{
+		text-decoration: underline;
+	}
+	
+	
+	#footer
+	{
+		clear: both;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+	
+	.footer
+	{
+		text-align: right;
+		padding: 10px;
+		padding-bottom: 12px;
+		border:#F2F2F2 solid 1px;
+		background-color: #FFFFFF;
+	}
+	
+	fieldset{
+		width: 55%;
+		border:1px solid #ccc;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-khtml-border-radius: 10px;
+		border-radius: 5px; 
+	}
+	
+	fieldset label{
+		float: right;
+	}
+	
+	#content
+	{
+		margin-bottom: 40px;
+	}
+	.content
+	{
+		padding: 10px;
+		border:#F2F2F2 solid 1px;
+		background-color: #FFFFFF;
+	}
+	
+	.table
+	{
+		width: 100%;
+	}
+	
+	.table th
+	{
+		background-color:#000000;
+		color: white;
+	}
+	</style>
+</head>
+<body>
+	<div id="header"><div class="header_content"><a href="/project/">Patient Alert System</a></div></div>
+	<div id="navigation">
+		<div class="header_content navigation">
+			{% block navigation %}<a href="register">Register</a> <a href="login">Log in</a>{% endblock%}
+		</div>
+	</div>
+	<div id="content">
+		<div class="header_content content">
+		{% block body %}
+			<h3>You are at the base html page</h3>
+		{% endblock %}
+		</div>
+	</div>
+	<div id="footer"><div class="header_content footer">copyright&copy; 2013</div></div>
+</body>
+</html>

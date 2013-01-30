@@ -1,0 +1,29 @@
+{% extends './base/portal.html' %}
+{% block pagetitle %}View Message Page{% endblock %}
+
+{% block content %}
+<h3>Displaying list of all Messages.</h3>
+<p> Add <a href="createNewMessage">New +</a> </p>
+	{% if messages %}
+		<table class="table" cellpadding="4" cellspacing="0" style="text-align: left">
+		<tr><th></th><th>Title/Type</th><th>Receipient Name</th><th>Number of sending times</th><th>Status</th></tr>
+		{% for message in messages %}
+		<tr>
+			<td style="font-size: 9px;"> 
+				<a href="editmessage/{{message.id}}">edit</a> &nbsp; 
+				<a href="viewmessage/{{message.id}}">view</a> &nbsp; 
+				<a href="deletemessage/{{message.id}}">delete</a> 
+			</td>
+			<td>{{ message.message_type }}</td>
+			<td>{{ message.receipient_name.first_name }} {{ message.receipient_name.last_name }}</td>
+			<td>{{ message.message_frequency }}</td>
+			<td>{{ message.active }}</td>
+		</tr>
+		{% endfor %}
+		</table>
+	{% else %}
+		<p>No message have been created yet.<p>
+		<p>Click <a href="createNewMessage">here</a> to create new message.</p>
+	{% endif %}
+	
+{% endblock %}
