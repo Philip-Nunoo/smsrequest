@@ -99,9 +99,9 @@ def login_user(request):
 				login(request, user)
 				return HttpResponseRedirect('/hospitalUser/') 
 		    else:
-		        state = "Your account is not active, please contact the site admin."
+		        state = "You have an inactive account, please contact the site admin."
 		else:
-		    state = "Your username and/or password were incorrect."
+		    state = "You entered either a wrong or non-existent username and/or password	."
 
 	return render_to_response('login.html',{'state':state, 'username': username})
 	

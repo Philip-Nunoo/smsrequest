@@ -34,14 +34,14 @@
 
 {% block body %}
     <header>
-        <h1>Patient Alert System | <a href="/hospitalUser/"> Web Portal</a></h1>
+        <h1>Patient Alert System v1.0 Beta | <a href="/hospitalUser/"> Web Portal</a></h1>
         <p><input type="checkbox">Enable Messaging</p>
     </header>
 	<div id="section">
 		<div class="section_nav">
 			<p>Welcome, {{ user.username }}</p>
-			<a href="createNewMessage">Create New Message</a><br />
 			<a href="addNewPatient">Add new patient</a><br />
+			<a href="createNewMessage">Create New Message</a><br />
 			<a href="addPersonnel">Add Personnel</a>
 		</div>
 		<div class="section_nav">
@@ -51,7 +51,9 @@
 		</div>
 		<div class="section_nav">
 			<p>Reports of activities</p>
-			<a href="viewLog">View sent messages</a>
+			<a href="viewLog">View sent messages</a><br/>
+			<a href="">Billings</a><br/>
+			<a href="">Summary</a>
 		</div>
 	</div>
 

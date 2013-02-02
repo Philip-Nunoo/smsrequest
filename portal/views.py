@@ -13,7 +13,7 @@ def home(request):
     return render_to_response('hospitalUser/index.html',{})
 
 @csrf_exempt
-@login_required(login_url='/project/login/')
+@login_required(login_url='/login/')
 def createNewMessage(request):
     if request.method == 'POST':
         form = NewMessageForm(request.POST)
@@ -43,7 +43,7 @@ def createNewMessage(request):
 
 
 @csrf_exempt
-@login_required(login_url='/project/login/')
+@login_required(login_url='/login/')
 def addNewPatient(request):
     if request.method == 'POST':
         form = NewPatientForm(request.POST)
@@ -57,7 +57,7 @@ def addNewPatient(request):
     
     
 @csrf_exempt
-@login_required(login_url='/project/login/')
+@login_required(login_url='/login/')
 def addPersonnel(request):
     if request.POST:
         form = NewPersonnelForm(request.POST)

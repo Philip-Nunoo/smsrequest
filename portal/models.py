@@ -48,5 +48,5 @@ class MessageLog(models.Model):
     patient = models.ForeignKey(Patient)
     date_time_sent = models.DateTimeField(auto_now = True, auto_now_add=True)
     
-    def __unicode__(self):
-        return self.first_name
+ #   def __unicode__(self):
+#        return self.id
